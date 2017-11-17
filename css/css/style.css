@@ -2,8 +2,15 @@ body {
   margin: 0;
   overflow-y: hidden; }
 
+a:hover {
+  color: #cfaca4;
+  fill: #cfaca4;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+
 .container {
-  width: 1024px;
+  width: 1100px;
   margin: 0 auto; }
 
 .flex {
@@ -48,7 +55,8 @@ header {
     -ms-flex-direction: row;
     flex-direction: row; }
     header #social-media a {
-      padding: 0px 7px; }
+      padding: 0px 5px;
+      margin: 0 3px; }
       header #social-media a svg {
         height: 16px; }
 
@@ -99,8 +107,11 @@ div#slider {
   overflow: hidden; }
 
 div#slider figure img {
-  width: 20%;
-  float: left; }
+  width: 100vw;
+  float: left;
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover; }
 
 div#slider figure {
   position: relative;
@@ -111,3 +122,11 @@ div#slider figure {
   font-size: 0;
   -webkit-animation: 30s slidy infinite;
   animation: 30s slidy infinite; }
+
+@media (max-width: 1150px) {
+  header div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; } }

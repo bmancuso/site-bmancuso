@@ -1,12 +1,19 @@
 $font-16: 1em;
+$cor-hover: #cfaca4;
 
 body {
   margin: 0;
   overflow-y: hidden;
 }
 
+a:hover {
+  color: $cor-hover;
+  fill: $cor-hover;
+  transition: 0.2s;
+}
+
 .container {
-  width: 1024px;
+  width: 1100px;
   margin: 0 auto;
 }
 .flex {
@@ -42,7 +49,8 @@ header {
   #social-media {
     flex-direction: row;
     a {
-      padding: 0px 7px;
+      padding: 0px 5px;
+      margin: 0 3px;
       svg {
         height: 16px;
       }
@@ -62,9 +70,18 @@ header {
 100% { left: -400%; }
 }
 
-body { margin: 0; }
-div#slider { overflow: hidden; }
-div#slider figure img { width: 20%; float: left; }
+body {
+  margin: 0;
+}
+div#slider {
+  overflow: hidden;
+}
+div#slider figure img {
+  width: 100vw;
+  float: left;
+  height: 100vh;
+  object-fit: cover;
+}
 div#slider figure {
   position: relative;
   width: 500%;
@@ -73,4 +90,12 @@ div#slider figure {
   text-align: left;
   font-size: 0;
   animation: 30s slidy infinite;
+}
+
+@media (max-width: 1150px) {
+  header {
+    div {
+      flex-direction: column;
+    }
+  }
 }
