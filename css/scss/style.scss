@@ -1,0 +1,76 @@
+$font-16: 1em;
+
+body {
+  margin: 0;
+  overflow-y: hidden;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-sb {
+  justify-content: space-between;
+}
+
+header {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.33);
+  background-color: white;
+  position: relative;
+  z-index: 999999;
+  h1 {
+    width: 220px;
+  }
+  a, span {
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: $font-16;
+    color: black;
+  }
+  a {
+    text-decoration: none;
+    letter-spacing: 3px;
+  }
+  span {
+    margin: 0 10px;
+  }
+  #social-media {
+    flex-direction: row;
+    a {
+      padding: 0px 7px;
+      svg {
+        height: 16px;
+      }
+    }
+  }
+}
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+body { margin: 0; }
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+}
