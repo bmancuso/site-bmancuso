@@ -227,7 +227,7 @@ div#slider figure {
       .bg #social-media-down a svg {
         height: 1em; } }
 
-@media (min-device-width: 500px) {
+@media (min-width: 500px) and (max-width: 1150px) {
   .dropdown:hover .dropdown-content {
     right: inherit;
     -webkit-box-align: stretch;
