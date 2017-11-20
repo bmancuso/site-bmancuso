@@ -93,7 +93,7 @@ header {
   text-align: left; }
 
 .dropdown-content a:hover {
-  background-color: #ddd; }
+  color: #cfaca4; }
 
 .dropdown:hover .dropdown-content {
   display: block; }
