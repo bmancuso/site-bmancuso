@@ -1,6 +1,8 @@
+// ATALHOS
 $font-16: 1em;
 $cor-hover: #cfaca4;
 
+// PADROES
 body {
   margin: 0;
   overflow-y: hidden;
@@ -30,15 +32,16 @@ a:hover {
   justify-content: center;
 }
 
+// HTML
 header {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.33);
+  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.33);
   background-color: white;
   position: relative;
   z-index: 999999;
   h1 {
     width: 220px;
   }
-  a, span {
+  a, span, button {
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
     font-size: $font-16;
     color: black;
@@ -49,6 +52,16 @@ header {
   }
   span {
     margin: 0 10px;
+  }
+  .menu-1 {
+    display: flex;
+    button {
+      background: none;
+      border: none;
+    }
+    button:hover {
+      color: $cor-hover;
+    }
   }
   #social-media-up, #social-media-down {
     flex-direction: row;
@@ -62,6 +75,34 @@ header {
   }
 }
 
+// DROPDOWN MENU
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+// SLIDER
 @keyframes slidy {
 0% { left: 0%; }
 20% { left: 0%; }
@@ -100,6 +141,7 @@ div#slider figure {
   display: none;
 }
 
+// MEDIA QUERY
 @media (max-width: 1150px) {
   .container {
     width: 260px;
@@ -123,6 +165,15 @@ div#slider figure {
     }
   }
 
+  .dropdown:hover {
+    .dropdown-content {
+      display: flex;
+      flex-direction: column;
+      right: 2px;
+      align-items: center;
+    }
+  }
+
   .bg{
     position: absolute;
     bottom: 0;
@@ -130,7 +181,7 @@ div#slider figure {
     width: 100vw;
     height: 56px;
     background-color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     #social-media-down {
       display: flex;
       justify-content: space-between;
@@ -141,6 +192,15 @@ div#slider figure {
         height: $font-16;
         }
       }
+    }
+  }
+}
+
+@media (min-device-width: 500px) {
+  .dropdown:hover {
+    .dropdown-content {
+      right: inherit;
+      align-items: stretch;
     }
   }
 }

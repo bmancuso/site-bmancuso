@@ -39,14 +39,12 @@ a:hover {
   justify-content: center; }
 
 header {
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.33);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.33);
   background-color: white;
   position: relative;
   z-index: 999999; }
   header h1 {
     width: 220px; }
-  header a, header span {
+  header a, header span, header button {
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
     font-size: 1em;
     color: black; }
@@ -55,6 +53,16 @@ header {
     letter-spacing: 3px; }
   header span {
     margin: 0 10px; }
+  header .menu-1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    header .menu-1 button {
+      background: none;
+      border: none; }
+    header .menu-1 button:hover {
+      color: #cfaca4; }
   header #social-media-up, header #social-media-down {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -66,6 +74,29 @@ header {
       margin: 0 3px; }
       header #social-media-up a svg, header #social-media-down a svg {
         height: 16px; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left; }
+
+.dropdown-content a:hover {
+  background-color: #ddd; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
 
 @-webkit-keyframes slidy {
   0% {
@@ -155,15 +186,28 @@ div#slider figure {
         display: none; }
     header #menu #social-media-up {
       display: none; }
+  .dropdown:hover .dropdown-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    right: 2px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .bg {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100vw;
     height: 56px;
-    background-color: white;
-    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+    background-color: white; }
     .bg #social-media-down {
       display: -webkit-box;
       display: -webkit-flex;
@@ -180,3 +224,11 @@ div#slider figure {
       width: 70%; }
       .bg #social-media-down a svg {
         height: 1em; } }
+
+@media (min-device-width: 500px) {
+  .dropdown:hover .dropdown-content {
+    right: inherit;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch; } }
