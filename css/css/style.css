@@ -48,7 +48,7 @@ header {
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
     font-size: 1em;
     color: black; }
-  header a {
+  header a, header button {
     text-decoration: none;
     letter-spacing: 3px; }
   header span {
