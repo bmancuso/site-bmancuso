@@ -186,6 +186,8 @@ div#slider figure {
         display: none; }
     header #menu #social-media-up {
       display: none; }
+  header #idiomas {
+    margin-bottom: 15px; }
   .dropdown:hover .dropdown-content {
     display: -webkit-box;
     display: -webkit-flex;
