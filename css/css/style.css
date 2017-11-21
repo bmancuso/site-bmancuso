@@ -263,9 +263,7 @@ div#slider figure {
       align-items: center;
       width: 70%; }
       .bg #social-media-down a svg {
-        height: 1em; }
-  #slider {
-    height: 370px; } }
+        height: 1em; } }
 
 @media (min-width: 500px) and (max-width: 1150px) {
   .dropdown:hover .dropdown-content {
