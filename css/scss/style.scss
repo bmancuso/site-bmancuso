@@ -134,7 +134,8 @@ body {
   margin: 0;
 }
 div#slider {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 div#slider figure img {
   width: 100vw;
@@ -222,6 +223,10 @@ div#slider figure {
         }
       }
     }
+  }
+
+  #slider {
+    height: 370px;
   }
 }
 

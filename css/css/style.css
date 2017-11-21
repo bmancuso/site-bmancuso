@@ -160,7 +160,8 @@ body {
   margin: 0; }
 
 div#slider {
-  overflow: hidden; }
+  overflow-x: hidden;
+  overflow-y: hidden; }
 
 div#slider figure img {
   width: 100vw;
@@ -262,7 +263,9 @@ div#slider figure {
       align-items: center;
       width: 70%; }
       .bg #social-media-down a svg {
-        height: 1em; } }
+        height: 1em; }
+  #slider {
+    height: 370px; } }
 
 @media (min-width: 500px) and (max-width: 1150px) {
   .dropdown:hover .dropdown-content {
