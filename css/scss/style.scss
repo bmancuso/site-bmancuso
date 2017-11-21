@@ -1,5 +1,6 @@
 // ATALHOS
 $font-16: 1em;
+$font-14: (14/16)+0em;
 $cor-hover: #cfaca4;
 
 // PADROES
@@ -38,12 +39,13 @@ header {
   background-color: white;
   position: relative;
   z-index: 999999;
+  height: 160px;
   h1 {
     width: 220px;
   }
   a, span, button {
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-    font-size: $font-16;
+    font-size: $font-14;
     color: black;
   }
   a, button {
@@ -51,7 +53,7 @@ header {
     letter-spacing: 3px;
   }
   span {
-    margin: 0 10px;
+    margin: 0 5px;
   }
   .menu-1 {
     display: flex;
@@ -63,14 +65,26 @@ header {
       color: $cor-hover;
     }
   }
+  .menu-1, .menu-2 {
+    display: flex;
+    align-items: center;
+  }
   #social-media-up, #social-media-down {
     flex-direction: row;
     a {
       padding: 0px 5px;
       margin: 0 3px;
       svg {
-        height: 16px;
+        height: 14px;
       }
+    }
+  }
+  #idiomas {
+    a, span {
+      color: #adadad;
+    }
+    a:hover {
+      opacity: 0.5;
     }
   }
 }
@@ -79,7 +93,7 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -105,13 +119,14 @@ header {
 // SLIDER
 @keyframes slidy {
 0% { left: 0%; }
-20% { left: 0%; }
-25% { left: -100%; }
-45% { left: -100%; }
-50% { left: -200%; }
-70% { left: -200%; }
+15% { left: 0%; }
+20% { left: -100%; }
+35% { left: -100%; }
+40% { left: -200%; }
+55% { left: -200%; }
+60% { left: -300%; }
 75% { left: -300%; }
-95% { left: -300%; }
+80% { left: -400%; }
 100% { left: -400%; }
 }
 
@@ -134,7 +149,7 @@ div#slider figure {
   left: 0;
   text-align: left;
   font-size: 0;
-  animation: 30s slidy infinite;
+  animation: 15s slidy infinite;
 }
 
 #social-media-down {
@@ -147,13 +162,20 @@ div#slider figure {
     width: 260px;
   }
   header {
+    height: 230px;
     #menu {
-      flex-direction: column;
+      display: block;
+      text-align: center;
       padding: 10px 0;
+      h1 {
+        margin: 22px auto;
+      }
       nav {
         flex-direction: column;
         .menu-1, .menu-2 {
-          margin-bottom: 15px;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 25px;
         }
         .divisao {
           display: none;
@@ -165,6 +187,8 @@ div#slider figure {
     }
     #idiomas {
       margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -184,7 +208,6 @@ div#slider figure {
     width: 100vw;
     height: 56px;
     background-color: white;
-    // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     #social-media-down {
       display: flex;
       justify-content: space-between;
