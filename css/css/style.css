@@ -177,8 +177,8 @@ div#slider figure {
   left: 0;
   text-align: left;
   font-size: 0;
-  -webkit-animation: 15s slidy infinite;
-  animation: 15s slidy infinite; }
+  -webkit-animation: 15s slidy alternate infinite;
+  animation: 15s slidy alternate infinite; }
 
 #social-media-down {
   display: none; }
@@ -226,6 +226,8 @@ div#slider figure {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center; }
+  #slider {
+    height: calc(100% - 230px); }
   .dropdown:hover .dropdown-content {
     display: -webkit-box;
     display: -webkit-flex;
