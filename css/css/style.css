@@ -177,8 +177,8 @@ div#slider figure {
   left: 0;
   text-align: left;
   font-size: 0;
-  -webkit-animation: 15s slidy alternate infinite;
-  animation: 15s slidy alternate infinite; }
+  -webkit-animation: 15s slidy infinite;
+  animation: 15s slidy infinite; }
 
 #social-media-down {
   display: none; }
